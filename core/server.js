@@ -55,7 +55,7 @@ module.exports = function (config, initializer, cb) {
         // route controllers to routes
         require('./router')(controllers, engine.server);
 
-        engine.server.listen(nconf.get('SERVER_PORT'), function () {
+        engine.server.listen(process.env.PORT || nconf.get('SERVER_PORT'), function () {
             if (typeof cb === 'function') {
                 cb();
             }
