@@ -1,0 +1,20 @@
+{
+  "name": "rest-engine",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Taylor Kisor-Smith",
+  "dependencies": {
+    "restify": "^2.8.4",
+    "mongoose": "4.0.1",
+    "lodash": "^3.6.0",
+    "nconf": "^0.7.1",
+    "url": "^0.10.2",
+    "glob": "^4.3.5",
+    "path": "^0.11.14",
+    "fs": "0.0.2"
+  }
+}
