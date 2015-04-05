@@ -35,7 +35,7 @@ module.exports = function (config, initializer, cb) {
 
         config = config || {
             name: 'api',
-            version: '1'
+            version: '1.0.0'
         };
 
         engine.server = restify.createServer(config);
