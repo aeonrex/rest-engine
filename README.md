@@ -10,6 +10,17 @@ to develop APIs without having to manually do [this](http://mcavage.me/node-rest
 
 ### How does it work?
 
+####Usage
+
+```javascript
+engine.bootstrap({
+    name: 'muber',
+    version: '0.1.0'
+}, null, function () {
+    console.log('Server is online...');
+});
+```
+
 rest-engine bootstraps onto Node.js projects that follow a few conditions:
 
 ####Structure
