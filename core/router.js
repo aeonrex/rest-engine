@@ -5,33 +5,32 @@ var util = require('../server').util,
 
 /**
  *
- * @param {string} r - route represented as a uri i.e: 'items/:id'
+ * @param {string} routeString - route represented as a uri i.e: 'items/:id'
  * @param method
  * @param handler
  * @returns {*}
  */
-function prepRoutes(r, method, handler) {
-    r = util.prependUri(version, r);
+function prepRoutes(routeString, method, handler) {
+    routeString = util.prependUri(version, routeString);
     switch (method) {
         case 'GET':
-            return server.get(r, handler);
+            return server.get(routeString, handler);
         case 'POST':
-            return server.post(r, handler);
+            return server.post(routeString, handler);
         case 'PUT':
-            return server.put(r, handler);
+            return server.put(routeString, handler);
         case 'PATCH':
-            return server.patch(r, handler);
+            return server.patch(routeString, handler);
         case 'DELETE':
-            return server.del(r, handler);
+            return server.del(routeString, handler);
         case 'HEAD':
-            return server.head(r, handler);
+            return server.head(routeString, handler);
         case 'OPTIONS':
-            return server.opts(r, handler);
+            return server.opts(routeString, handler);
         default:
             break;
     }
 }
-
 
 module.exports = function (controllers) {
     util._.forEach(resources, function (resource) {
