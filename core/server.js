@@ -55,6 +55,7 @@ module.exports = function (config, initializer, cb) {
         // route controllers to routes
         require('./router')(controllers, engine.server);
 
+        // start the server; listen on env.PORT (for heroku) or get config port
         engine.server.listen(process.env.PORT || nconf.get('SERVER_PORT'), function () {
             if (typeof cb === 'function') {
                 cb();
