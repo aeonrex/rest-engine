@@ -1,5 +1,5 @@
 # rest-engine
-REST API engine and toolkit that bundles [restify](https://www.npmjs.com/package/restify), [nconf](https://www.npmjs.com/package/nconf),[mongoose](), and utilities
+REST API engine and toolkit that bundles [restify](https://www.npmjs.com/package/restify), [nconf](https://www.npmjs.com/package/nconf),[mongoose](http://mongoosejs.com/), and utilities
 that help aid in spinning up an API in Node.js
 
 The MIT License (MIT) Copyright (c) 2015 Taylor Kisor-Smith
