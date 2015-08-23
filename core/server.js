@@ -1,6 +1,8 @@
 'use strict';
 
-var restify = require('restify'),
+var http = require('http'),
+    https = require('https'),
+    restify = require('restify'),
     engine = require('../server'),
     util = require('./util'),
     nconf = require('nconf'),
@@ -8,6 +10,10 @@ var restify = require('restify'),
     controllerUri = '/app/controllers',
     configPath = __dirname + '/config/environments/',
     appConfigPath = process.cwd() + '/config/environments/';
+
+// Do not limit maxSocket connections
+https.globalAgent.maxSockets = Infinity;
+http.globalAgent.maxSockets = Infinity;
 
 // do config loads.
 nconf
