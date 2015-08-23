@@ -7,12 +7,10 @@ var util = require('util'),
     glob = require('glob'),
     path = require('path');
 
-
 util._ = _;
 util.fs = fs;
 util.url = url;
 util.path = path;
-
 
 /**
  * findPackage - give a directory, it turns it and it's content into a js object
